@@ -14,9 +14,8 @@ Development for first commit is done in git bash terminal with **python venv**, 
 
 For the first commit, because no database has been set up, `api.py` and `streamlit_chatbot.py` are very crude prototypes that do not function together as intended. To see the chatbot front end, follow these steps.
 1. open a bash terminal
-2. run `python -m venv myenv` to create a virtual environment
-3. run `source myenv/bin/activate` to activate the environment
-4. run `pip install -r requirements.txt`
-5. run `streamlit run streamlit_chatbot.py`
+2. run `myenv/Scripts/activate` to activate the environment
+3. run `pip install -r requirements.txt`
+4. run `streamlit run streamlit_chatbot.py`
 
 Sending a message to the chatbot does send the HTTP request to api.py correctly, but the prompt can't be routed to OpenAI API because we don't have a key yet, and the async function `process_query()` gets stuck at line `sql_query = generate_sql(query.question)`
